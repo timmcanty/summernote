@@ -70,7 +70,7 @@
                         '</a></li>';
         }, '');
 
-        var label = '<span class="note-current-fontsize">11</span>';
+        var label = '<span class="note-current-fontsize">14</span>';
         return tmpl.button(label, {
           title: lang.fontstyle.size,
           dropdown: '<ul class="dropdown-menu">' + items + '</ul>'
