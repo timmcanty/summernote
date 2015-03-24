@@ -16,13 +16,13 @@
    * @class plugin.fontstyle
    *
    * FontStyle Plugin
-   * 
-   * ### load script 
-   * 
+   *
+   * ### load script
+   *
    * ```
    * < script src="plugin/summernote-ext-fontstyle.js"></script >
-   * ``` 
-   * 
+   * ```
+   *
    * ### use a plugin in toolbar
    * ```
    *    $("#editor").summernote({
@@ -30,18 +30,18 @@
    *    toolbar : [
    *        ['group', [ 'fontstyle' ]]
    *    ]
-   *    ...    
-   *    }); 
+   *    ...
+   *    });
    * ```
    */
   $.summernote.addPlugin({
     /** @property {String} name name of plugin */
     name: 'fontstyle', // name of plugin
     /**
-     * @property {Object} buttons 
-     * @property {Function} buttons.strikethrough  
-     * @property {Function} buttons.superscript   
-     * @property {Function} buttons.subscript   
+     * @property {Object} buttons
+     * @property {Function} buttons.strikethrough
+     * @property {Function} buttons.superscript
+     * @property {Function} buttons.subscript
      * @property {Function} buttons.fontsize   dropdown button
      */
     buttons: { // buttons
@@ -85,20 +85,20 @@
      * @property {Function} events.subscript apply subscript to selected range
      * @property {Function} events.fontSize apply font size to selected range
      */
-    events: { // events
-      strikethrough: function (layoutInfo) {
+     events: { // events
+      strikethrough: function (event, editor, layoutInfo) {
         editor.strikethrough(layoutInfo.editable());
       },
-      superscript: function (layoutInfo) {
+      superscript: function (event, editor, layoutInfo) {
         editor.superscript(layoutInfo.editable());
       },
-      subscript: function (layoutInfo) {
+      subscript: function (event, editor, layoutInfo) {
         editor.subscript(layoutInfo.editable());
       },
-      fontsize: function (layoutInfo, value) {
+      fontsize: function (event, editor, layoutInfo, value) {
         editor.fontSize(layoutInfo.editable(), value);
       }
-    },
+},
 
     options: {
       fontSizes: ['8', '9', '10', '11', '12', '14', '18', '24', '36']
