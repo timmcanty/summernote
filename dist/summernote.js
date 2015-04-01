@@ -5410,14 +5410,7 @@
           event: 'indent'
         });
 
-        var dropdown = '<div class="dropdown-menu">' +
-                         '<div class="note-align btn-group">' +
-                           leftButton + centerButton + rightButton + justifyButton +
-                         '</div>' +
-                         '<div class="note-list btn-group">' +
-                           indentButton + outdentButton +
-                         '</div>' +
-                       '</div>';
+        var dropdown = leftButton + centerButton + rightButton;
 
         return tplIconButton('fa fa-align-left', {
           title: lang.paragraph.paragraph,
