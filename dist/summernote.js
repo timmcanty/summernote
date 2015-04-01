@@ -2915,7 +2915,8 @@
           self.releaseList([paras]);
         } else {
           $.each(paras, function (idx, para) {
-            $.trim(para);
+            var html = $(para).html()
+            $(para).html(html.replace(/&nbsp;/g, ''));
             var margin = $(para).data('margin');
             if (margin) {
               $(para).data('margin', margin - 1)
