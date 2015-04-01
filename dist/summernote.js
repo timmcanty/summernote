@@ -2887,7 +2887,7 @@
             }
             // $(para).css('marginLeft', function (idx, val) {
             //   return (parseInt(val, 10) || 0) + 25;
-            });
+            // });
           });
         }
       });
