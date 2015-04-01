@@ -5412,9 +5412,7 @@
 
         var dropdown = leftButton + centerButton + rightButton;
 
-        return tplIconButton('fa fa-align-left', {
-          title: lang.paragraph.paragraph,
-          dropdown: dropdown
+        return dropdown
         });
       },
       height: function (lang, options) {
