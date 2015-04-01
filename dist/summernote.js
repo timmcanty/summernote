@@ -2919,7 +2919,7 @@
             var margin = $(para).data('margin');
             if (margin) {
               $(para).data('margin', margin - 1)
-              for (var i = 0; i < margin - 1; i++;) {
+              for (var i = 0; i < margin - 1; i++) {
                 $(para).prepend('&nbsp;&nbsp;&nbsp;&nbsp;')
               }
             }
