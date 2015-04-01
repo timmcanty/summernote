@@ -2878,8 +2878,15 @@
           self.wrapList(paras, head.parentNode.nodeName);
         } else {
           $.each(paras, function (idx, para) {
-            $(para).css('marginLeft', function (idx, val) {
-              return (parseInt(val, 10) || 0) + 25;
+            $(para).prepend('&nbsp;&nbsp;&nbsp;&nbsp;');
+            var margin = $(para).data('margin');
+            if (margin) {
+              $(para).data('margin', margin + 1)
+            } else {
+              $(para).data('margin', 1)
+            }
+            // $(para).css('marginLeft', function (idx, val) {
+            //   return (parseInt(val, 10) || 0) + 25;
             });
           });
         }
@@ -2908,9 +2915,17 @@
           self.releaseList([paras]);
         } else {
           $.each(paras, function (idx, para) {
-            $(para).css('marginLeft', function (idx, val) {
-              val = (parseInt(val, 10) || 0);
-              return val > 25 ? val - 25 : '';
+            $.trim(para);
+            var margin = $(para).data('margin');
+            if (margin) {
+              $(para).data('margin', margin - 1)
+              for (var i = 0; i < margin - 1; i++;) {
+                $(para).prepend('&nbsp;&nbsp;&nbsp;&nbsp;')
+              }
+            }
+            // $(para).css('marginLeft', function (idx, val) {
+            //   val = (parseInt(val, 10) || 0);
+            //   return val > 25 ? val - 25 : '';
             });
           });
         }
