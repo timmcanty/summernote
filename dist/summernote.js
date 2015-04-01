@@ -2926,7 +2926,7 @@
             // $(para).css('marginLeft', function (idx, val) {
             //   val = (parseInt(val, 10) || 0);
             //   return val > 25 ? val - 25 : '';
-            });
+            // });
           });
         }
       });
