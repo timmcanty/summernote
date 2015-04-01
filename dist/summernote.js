@@ -5412,8 +5412,8 @@
 
         var dropdown = leftButton + centerButton + rightButton;
 
-        return dropdown
-        });
+        return dropdown;
+        };
       },
       height: function (lang, options) {
         var items = options.lineHeights.reduce(function (memo, v) {
